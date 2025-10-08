@@ -44,3 +44,16 @@ classifiers = [
 [project.urls]
 Homepage = "https://lunarlab-gatech.github.io/MorphSym-HGNN/"
 Issues = ""
+
+[tool.pytest.ini_options]
+filterwarnings = [
+  "ignore:ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead:DeprecationWarning",
+  "ignore:Attribute s is deprecated and will be removed in Python 3.14; use value instead:DeprecationWarning",
+  "ignore:pkg_resources is deprecated as an API:DeprecationWarning",
+  "ignore:Deprecated call to `pkg_resources.declare_namespace`:DeprecationWarning",
+  "ignore:.*pkg_resources is deprecated as an API.*:DeprecationWarning",
+  "ignore:.*Deprecated call to `pkg_resources.declare_namespace.*:DeprecationWarning",
+  "ignore:pkg_resources is deprecated as an API.*:DeprecationWarning:lightning.fabric.__init__",
+  "ignore::DeprecationWarning:lightning.fabric",
+  "ignore:pkg_resources is deprecated as an API.*:UserWarning"
+]
